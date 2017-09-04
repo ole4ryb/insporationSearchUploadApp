@@ -1,9 +1,0 @@
-Columns:
-Unique id of the quote
-Nr of the quote in the message
-Message title
-Message preacher
-Place
-Date
-Quote
-Link to the quote
