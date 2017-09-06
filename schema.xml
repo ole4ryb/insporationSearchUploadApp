@@ -11,10 +11,6 @@
    <field name="message_quote" type="string" indexed="true" stored="false" docValues="false" />
    <field name="quote_link" type="string" indexed="true" stored="false" docValues="false" />
 
-    <!-- 
-		<dynamicField name="*_i"  type="int"  indexed="true"  stored="true"/>
-		<dynamicField name="*_is" type="int"  indexed="true"  stored="true"  multiValued="true"/> 
-    -->
   
    <uniqueKey>id</uniqueKey>
 
