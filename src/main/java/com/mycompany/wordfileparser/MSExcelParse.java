@@ -1,5 +1,6 @@
 package com.mycompany.wordfileparser;
 
+import com.mycompany.fileoperations.WatchDir;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -73,8 +74,9 @@ public class MSExcelParse {
       BodyContentHandler handler = new BodyContentHandler();
       Metadata metadata = new Metadata();
      
-      InputStream fileInputStream = new FileInputStream(new File("1965-04-25_Spirit_Of_Truth.doc"));            
-      ParseContext pcontext = new ParseContext();
+      InputStream fileInputStream = new FileInputStream(new File("1965-04-25_Spirit_Of_Truth.doc"));        
+      
+      //ParseContext pcontext = new ParseContext();
       
       Tika tika = new Tika();
       TikaInputStream reader = TikaInputStream.get(new File("1965-04-25_Spirit_Of_Truth.doc"), metadata);
@@ -86,6 +88,12 @@ public class MSExcelParse {
       int[] count = {0};
       //quoteParts.forEach(x -> {System.out.println("Number: # " + count[0]++  + "\n" + x);});
       createQuoteXmlStructure(quoteParts, couunterMessageId, messageTitle, messagePreacher, messagePlace, messageDate);
+      
+        // register directory and process its events
+        String pathToDirToBeListened = System.getProperty("user.dir") + "\\fileToProcess\\";
+        Path dir = Paths.get(pathToDirToBeListened);
+        new WatchDir(dir, false).processEvents();
+   
    }
 
     private static void createQuoteXmlStructure(Stream<String> quoteParts, int id, String messageTitle, String messagePreacher, String messagePlace, LocalDate messageDate) {
