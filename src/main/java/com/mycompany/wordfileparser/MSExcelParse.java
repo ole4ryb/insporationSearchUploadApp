@@ -90,7 +90,7 @@ public class MSExcelParse {
       createQuoteXmlStructure(quoteParts, couunterMessageId, messageTitle, messagePreacher, messagePlace, messageDate);
       
         // register directory and process its events
-        String pathToDirToBeListened = System.getProperty("user.dir") + "\\fileToProcess\\";
+        String pathToDirToBeListened = System.getProperty("user.dir") + "\\messageToProcess\\";
         Path dir = Paths.get(pathToDirToBeListened);
         new WatchDir(dir, false).processEvents();
    

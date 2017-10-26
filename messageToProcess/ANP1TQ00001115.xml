@@ -1,0 +1,549 @@
+<StatementOfWork>
+  <title>Statement of Work</title>
+  <badgeIcon>/images/badgeicons/doc_payment_terms.gif</badgeIcon>
+  <id label="ID">ANP1TQ00001115</id>
+  <name label="Name">17.20 SOWT</name>
+  <status label="Status">Pending Approval</status>
+  <supplier label="Supplier">
+    <supplierName label="Supplier Name">ANP1 SUP1</supplierName>
+    <address label="Address">
+      <address1 label="Address 1">ghjtrdyugoijpk[l;</address1>
+      <address2 label="Address 2" />
+      <city label="City">xdfcvgbhinjmk</city>
+      <state label="State" />
+      <postalCode label="Postal Code">12345678</postalCode>
+      <country label="Country">IRL</country>
+      <countryName label="Country Name">Ireland</countryName>
+    </address>
+    <manager label="Manager Name">ANP1 SUP1</manager>
+    <phoneNumber label="Phone Number" />
+    <email label="Email">anh.pham01@sap.com</email>
+    <faxNumber label="Fax Number" />
+    <customFields type="Supplier">
+      <customField>
+        <section>Details</section>
+        <name>SUP SUP entered 2</name>
+        <value />
+      </customField>
+      <customField>
+        <section>Details</section>
+        <name>SUP SUP entered</name>
+        <value />
+      </customField>
+    </customFields>
+  </supplier>
+  <startDate label="Start Date">09/01/2017</startDate>
+  <endDate label="End Date">09/11/2018</endDate>
+  <buyer label="Buyer">
+    <buyerName label="Buyer Name">Anh Seconda</buyerName>
+    <address label="Address">
+      <address1 label="Address 1">Blarney Co</address1>
+      <address2 label="Address 2" />
+      <city label="City">Cork</city>
+      <state label="State" />
+      <postalCode label="Postal Code">123456</postalCode>
+      <country label="Country">IRL</country>
+      <countryName label="Country Name">Ireland</countryName>
+    </address>
+    <buyerReference label="Buyer Reference" />
+    <owner label="Owner">Virtual Admin 1</owner>
+    <manager label="Manager Name">Virtual Admin 1</manager>
+    <phoneNumber label="Phone Number" />
+    <email label="Email">anh.pham01@sap.com</email>
+    <faxNumber label="Fax Number" />
+  </buyer>
+  <summaryInformation label="Summary">
+    <sowTitle label="Statement of Work Title">17.20 SOWT</sowTitle>
+    <supplierName label="Supplier Name">ANP1 SUP1</supplierName>
+    <buyerReference label="Buyer Reference" />
+    <sowId label="Statement of Work ID">ANP1TQ00001115</sowId>
+    <revisionNumber label="Revision Number">0</revisionNumber>
+    <sowStatus label="Statement of Work Status">Pending Approval</sowStatus>
+    <finalApprovalDate label="Final Approval Date" />
+    <classification label="Classification">Classification - Services</classification>
+    <description label="Description" />
+    <sowOwner label="Statement of Work Owner">Virtual Admin 1</sowOwner>
+    <sowMaximumBudget label="Maximum Budget">12,345,678.00 EUR</sowMaximumBudget>
+    <sowPeriod label="Statement of Work Period">09/01/2017 to 09/11/2018</sowPeriod>
+    <sowSubmitDate>09/11/2017</sowSubmitDate>
+    <bu label="Business Unit">BU 1 (BU 1)</bu>
+    <site label="Site">
+      <siteName>Site EUR</siteName>
+      <address label="Address">
+        <address1 label="Address 1" />
+        <address2 label="Address 2" />
+        <city label="City">Aldersgate</city>
+        <state label="State">London, City of</state>
+        <postalCode label="Postal Code" />
+        <country label="Country">GBR</country>
+        <countryName label="Country Name">United Kingdom</countryName>
+      </address>
+    </site>
+    <detailsCustomList label="Custom Field" />
+  </summaryInformation>
+  <costAllocationHeaders label="Cost Allocation">
+    <CostCenters>Cost Center</CostCenters>
+    <GeneralLedger>General Ledger</GeneralLedger>
+    <AllocationPercentage>Allocation %</AllocationPercentage>
+    <CostCentreOwner>Cost Center Owner</CostCentreOwner>
+    <costAllocationNew label="Cost Allocation">
+      <costCenters label="Cost Center">CC10</costCenters>
+      <GeneralLedger label="General Ledger">DEFAULT</GeneralLedger>
+      <AllocationPercentage label="Allocation %">100.000</AllocationPercentage>
+      <CostCentreOwner label="Cost Center Owner">Virtual Admin 1</CostCentreOwner>
+    </costAllocationNew>
+  </costAllocationHeaders>
+  <baseInformation label="Base Information">
+    <sowOwner label="Owner">Virtual Admin 1</sowOwner>
+    <currency label="Currency">EUR</currency>
+    <billableFlag label="Create Non-Billable Statement of Work">Unchecked</billableFlag>
+  </baseInformation>
+  <source label="Source">
+    <supplierSource label="Supplier">ANP1 SUP1</supplierSource>
+    <contactPerson label="Primary Contact Person">ANP1 SUP1</contactPerson>
+  </source>
+  <projectDetails label="Statement of Work">
+    <createDateDetails label="Create Date">09/11/2017</createDateDetails>
+    <nameDetails label="Name">17.20 SOWT</nameDetails>
+    <descriptionDetails label="Description" />
+    <startDateDetails label="Start Date">09/01/2017</startDateDetails>
+    <endDateDetails label="End Date">09/11/2018</endDateDetails>
+    <definedBy label="Defined By">Buyer</definedBy>
+  </projectDetails>
+  <postingInformationDetails label="Posting Information">
+    <site label="Site">Site EUR</site>
+    <location label="Location">Site 1 Location 1 (Site EUR)</location>
+    <bu label="Business Unit">BU 1 (BU 1)</bu>
+  </postingInformationDetails>
+  <postingInformationDetails label="Posting Information">
+    <detailsCustomList label="Custom Field" />
+  </postingInformationDetails>
+  <accountingDetails label="Accounting">
+    <maximumBudget label="Maximum Budget">12,345,678.00</maximumBudget>
+  </accountingDetails>
+  <costAllocation label="Cost Allocation">
+    <costCenterDetail label="Cost Center">CC10</costCenterDetail>
+  </costAllocation>
+  <rulesDetails label="Rules">
+    <disallowApprovalDetails label="Disallow approval of items when Maximum Budget is exceeded">Selected</disallowApprovalDetails>
+    <approvalMaximumBudget label="SOW Revision approval required only when Maximum Budget is increased">Not Selected</approvalMaximumBudget>
+    <suppressBudgetAmountFromSupplierFlag label="Suppress Budget Amount from Suppliers">False</suppressBudgetAmountFromSupplierFlag>
+  </rulesDetails>
+  <payTermsDetail label="Statement of Work Detail">
+    <header />
+    <description label="Description" />
+    <location label="Location">Site 1 Location 1 (Site EUR)</location>
+    <characteristicsList label="Characteristics">
+      <managementEvent>Management Events</managementEvent>
+      <schedule>Schedule</schedule>
+      <event>Event</event>
+      <fee>Fees</fee>
+      <teamMembers>SOW Workers</teamMembers>
+    </characteristicsList>
+  </payTermsDetail>
+  <accounting label="Accounting (EUR)">
+    <header />
+    <maximumBudget>Maximum Budget</maximumBudget>
+    <amount>12,345,678.00</amount>
+    <cumulativeActualSpent>Cumulative Actual Spend</cumulativeActualSpent>
+    <amount>0.00</amount>
+    <doNotExceed>Maximum Budget</doNotExceed>
+    <amount>12,345,678.00</amount>
+    <mspServiceFeePct>MSP Service Fee %</mspServiceFeePct>
+    <amount>10.00</amount>
+    <presentedBudget>Presented Budget</presentedBudget>
+    <amount>12,345,678.00</amount>
+    <payTermsActualSpent>Statement of Work Actual Spend</payTermsActualSpent>
+    <amount>0.00</amount>
+  </accounting>
+  <clauses label="Clauses">
+    <header />
+    <section label="Section">
+      <sectionName sectionName="1" sectionType="">1</sectionName>
+      <owner label="Owner">Virtual Admin 1</owner>
+      <categoryList>
+        <header />
+        <category label="Category">
+          <categoryName>1</categoryName>
+          <readOnly label="Read Only">No</readOnly>
+          <mandatory label="Mandatory">No</mandatory>
+        </category>
+      </categoryList>
+    </section>
+  </clauses>
+  <costCenterAllocation label="Cost Allocation (EUR)">
+    <header />
+    <costCenter>Cost Center</costCenter>
+    <percentage>%</percentage>
+    <amount>Amount</amount>
+    <costCenterDetail>
+      <costCenter>CC10</costCenter>
+      <percentage>100.00</percentage>
+      <amount>12,345,678.00</amount>
+    </costCenterDetail>
+    <total label="Total Allocation">
+      <percentage>100.00</percentage>
+      <amount>12,345,678.00</amount>
+    </total>
+  </costCenterAllocation>
+  <postingInformation label="Posting Information (EUR)">
+    <header />
+    <owner label="Owner">Virtual Admin 1</owner>
+    <creator label="Creator">Virtual Admin 1</creator>
+    <supplierPrimaryContactPerson label="Supplier Primary Contact Person">ANP1 SUP1</supplierPrimaryContactPerson>
+    <createDate label="Create Date">09/11/2017 09:08 AM</createDate>
+    <masterSOW label="Master SOW Flag?">No</masterSOW>
+    <payTermsTemplate label="SOW Template">17.20 SOWT</payTermsTemplate>
+    <classification label="Classification">Classification - Services</classification>
+  </postingInformation>
+  <postingCustomList />
+  <rules label="Rules">
+    <header />
+    <disallowApproval label="Disallow approval of items when Maximum Budget is exceeded">Yes</disallowApproval>
+    <AppReqEstSpendExceeded label="SOW Revision approval required only when Maximum Budget is increased">No</AppReqEstSpendExceeded>
+    <decreaseEvtAmount label="Supplier cannot modify Event amounts when marking as complete">Yes</decreaseEvtAmount>
+    <decreaseScheduleAmount label="Supplier cannot modify Schedule amounts prior to invoicing">Yes</decreaseScheduleAmount>
+    <autoActivate label="Enable Auto Activate">Yes</autoActivate>
+    <allowSupplierReviewOnTimesheet label="Allow Supplier Review on Time Sheet">No</allowSupplierReviewOnTimesheet>
+  </rules>
+  <characteristics label="Statement of Work Characteristics">
+    <header>Statement of Work Characteristics</header>
+    <scheduledFeeHeader label="Scheduled Fees">
+      <status>Status</status>
+      <type>Type</type>
+      <name>Name</name>
+      <owner>Owner</owner>
+      <poNumber>PO Number</poNumber>
+      <dueDate>Frequency</dueDate>
+      <dateRange>Date Range</dateRange>
+      <scheduleSubmitDate>Schedule Submit Date</scheduleSubmitDate>
+      <unit>Unit</unit>
+      <utilisedUnits>Utilized Units</utilisedUnits>
+      <scheduleSiteDetails>Schedule Site Details</scheduleSiteDetails>
+      <maxUnits>Maximum Units</maxUnits>
+      <scheduledFeeRate>Rate/Unit</scheduledFeeRate>
+      <scheduledNumOfUnits># of Units</scheduledNumOfUnits>
+      <requestedAmount>Requested Amount</requestedAmount>
+      <finalAmount>Final Amount</finalAmount>
+      <totalAmount>Total Amount</totalAmount>
+      <capitalized>Capitalized?</capitalized>
+      <scheduledFee label="Schedule Fees">
+        <status label="Status">Created</status>
+        <type>Recurring Fee</type>
+        <name label="Name">ertyuioplf jsfskd-gfydsfiafhal</name>
+        <owner label="Owner">1, Virtual Admin</owner>
+        <poNumber label="PO Number" />
+        <frequency label="Frequency">Daily</frequency>
+        <dateRange label="Date Range">09/11/2017 to 09/14/2017</dateRange>
+        <scheduleSubmitDate label="Schedule Submit Date" />
+        <rate label="Rate">EUR 12.00 / Day</rate>
+        <unit label="Unit">Day</unit>
+        <utilisedUnits label="Utilized Units">2.00</utilisedUnits>
+        <scheduleSiteDetails>
+          <siteCode label="Code">Site EUR</siteCode>
+          <siteName label="Name">Site EUR</siteName>
+          <address label="Address">
+            <address1 label="Address 1" />
+            <address2 label="Address 2" />
+            <city label="City">Aldersgate</city>
+            <state label="State">London, City of</state>
+            <postalCode label="Postal Code" />
+            <country label="Country">GBR</country>
+            <countryName label="Country Name">United Kingdom</countryName>
+          </address>
+        </scheduleSiteDetails>
+        <maxUnits label="Maximum Units">2.00</maxUnits>
+        <totalAmount>24.00</totalAmount>
+        <capitalized label="Capitalized?">No</capitalized>
+      </scheduledFee>
+      <finalTotal>24.00</finalTotal>
+    </scheduledFeeHeader>
+    <scheduleAdditionalDetailsHeader label="Additional Fields">
+      <name>Schedule Name</name>
+      <fieldName>Field Name</fieldName>
+      <fieldValue>Value</fieldValue>
+      <scheduleAdditionalDetails label="Additional Fields">
+        <name label="Schedule Name">ertyuioplf jsfskd-gfydsfiafhal</name>
+        <fieldName label="Field Name">S_Mand_AALAT_Buyer</fieldName>
+        <fielValue label="Value">1;2;3</fielValue>
+      </scheduleAdditionalDetails>
+      <scheduleAdditionalDetails label="Additional Fields">
+        <name label="Schedule Name" />
+        <fieldName label="Field Name">S_Mand_AALAT_Supplier</fieldName>
+        <fielValue label="Value" />
+      </scheduleAdditionalDetails>
+    </scheduleAdditionalDetailsHeader>
+    <eventHeader label="Events">
+      <status>Status</status>
+      <description>Description</description>
+      <name>Name</name>
+      <eventID>ID</eventID>
+      <poNumber>PO Number</poNumber>
+      <eventSubmitDate>Submit Date</eventSubmitDate>
+      <dueDate>Due Date</dueDate>
+      <eventSiteDetails>Event Site Details</eventSiteDetails>
+      <requestedAmount>Requested Amount</requestedAmount>
+      <finalAmount>Final Amount</finalAmount>
+      <owner>Owner</owner>
+      <capitalized>Capitalized?</capitalized>
+      <event label="Event">
+        <status label="Status">Created</status>
+        <name label="Name">E1</name>
+        <eventId fgLabel="Reference" label="ID">ANP1PE00001218</eventId>
+        <poNumber label="PO Number" />
+        <description label="Name" />
+        <eventSubmitDate label="Event Submit Date" />
+        <date label="Date">09/11/2017</date>
+        <eventSiteDetails>
+          <siteCode label="Code">Site EUR</siteCode>
+          <siteName label="Name">Site EUR</siteName>
+          <address label="Address">
+            <address1 label="Address 1" />
+            <address2 label="Address 2" />
+            <city label="City">Aldersgate</city>
+            <state label="State">London, City of</state>
+            <postalCode label="Postal Code" />
+            <country label="Country">GBR</country>
+            <countryName label="Country Name">United Kingdom</countryName>
+          </address>
+        </eventSiteDetails>
+        <requestedAmount label="Requested Amount">11.00</requestedAmount>
+        <finalAmount label="Final Amount">11.00</finalAmount>
+        <capitalized label="Capitalized?">No</capitalized>
+        <owner label="Owner">1, Virtual Admin</owner>
+      </event>
+      <eventTotalAmount label="Total Amount">11.00</eventTotalAmount>
+      <eventFinalTotalAmount label="Total Amount">11.00</eventFinalTotalAmount>
+    </eventHeader>
+    <eventeAdditionalDetailsHeader label="Additional Fields">
+      <name>Event Name</name>
+      <fieldName>Field Name</fieldName>
+      <fieldValue>Value</fieldValue>
+      <eventAdditionalDetails label="Additional Fields">
+        <name label="Event Name">E1</name>
+        <fieldName label="Field Name">E_Mand_AALAT_Buyer</fieldName>
+        <fielValue label="Value">1;2;3</fielValue>
+      </eventAdditionalDetails>
+      <eventAdditionalDetails label="Additional Fields">
+        <name label="Event Name" />
+        <fieldName label="Field Name">E_Mand_AALAT_Supplier</fieldName>
+        <fielValue label="Value" />
+      </eventAdditionalDetails>
+    </eventeAdditionalDetailsHeader>
+    <unitDefinitionAdditionalDetailsHeader label="Additional Fields">
+      <name>Fee Name</name>
+      <fieldName>Field Name</fieldName>
+      <fieldValue>Value</fieldValue>
+      <unitDefinitionAdditionalDetails label="Additional Fields">
+        <name label="Fee Name">fee 1</name>
+        <fieldName label="Field Name">CFNAB</fieldName>
+        <fielValue label="Value">1</fielValue>
+      </unitDefinitionAdditionalDetails>
+      <unitDefinitionAdditionalDetails label="Additional Fields">
+        <name label="Fee Name" />
+        <fieldName label="Field Name">CFTAB</fieldName>
+        <fielValue label="Value">optional default text</fielValue>
+      </unitDefinitionAdditionalDetails>
+      <unitDefinitionAdditionalDetails label="Additional Fields">
+        <name label="Fee Name" />
+        <fieldName label="Field Name">F_Mand_AALAT_Buyer</fieldName>
+        <fielValue label="Value">1;2;3</fielValue>
+      </unitDefinitionAdditionalDetails>
+      <unitDefinitionAdditionalDetails label="Additional Fields">
+        <name label="Fee Name" />
+        <fieldName label="Field Name">F_Mand_AALAT_Supplier</fieldName>
+        <fielValue label="Value" />
+      </unitDefinitionAdditionalDetails>
+      <unitDefinitionAdditionalDetails label="Additional Fields">
+        <name label="Fee Name" />
+        <fieldName label="Field Name">CFDAB</fieldName>
+        <fielValue label="Value">01/03/2017</fielValue>
+      </unitDefinitionAdditionalDetails>
+      <unitDefinitionAdditionalDetails label="Additional Fields">
+        <name label="Fee Name" />
+        <fieldName label="Field Name">CFTAAB</fieldName>
+        <fielValue label="Value">optional default text area</fielValue>
+      </unitDefinitionAdditionalDetails>
+      <unitDefinitionAdditionalDetails label="Additional Fields">
+        <name label="Fee Name" />
+        <fieldName label="Field Name">CFUPLAB</fieldName>
+        <fielValue label="Value">3 CFUPLAB</fielValue>
+      </unitDefinitionAdditionalDetails>
+      <unitDefinitionAdditionalDetails label="Additional Fields">
+        <name label="Fee Name" />
+        <fieldName label="Field Name">CFSPLAB</fieldName>
+        <fielValue label="Value" />
+      </unitDefinitionAdditionalDetails>
+      <unitDefinitionAdditionalDetails label="Additional Fields">
+        <name label="Fee Name" />
+        <fieldName label="Field Name">CFCDPLAB</fieldName>
+        <fielValue label="Value">GBR - National Insurance Number</fielValue>
+      </unitDefinitionAdditionalDetails>
+      <unitDefinitionAdditionalDetails label="Additional Fields">
+        <name label="Fee Name" />
+        <fieldName label="Field Name">CFFGPLAB</fieldName>
+        <fielValue label="Value">Yes</fielValue>
+      </unitDefinitionAdditionalDetails>
+      <unitDefinitionAdditionalDetails label="Additional Fields">
+        <name label="Fee Name" />
+        <fieldName label="Field Name">CFSODGAB</fieldName>
+        <fielValue label="Value">zb3OTKkazyEXmSTESIEAwSeLkwMQ=</fielValue>
+      </unitDefinitionAdditionalDetails>
+    </unitDefinitionAdditionalDetailsHeader>
+    <unitDefinitionHeader label="Fee Definitions">
+      <name>Name</name>
+      <owner>Owner</owner>
+      <feeType>Fee Rate Type</feeType>
+      <poNumber>PO Number</poNumber>
+      <rate>Rate /Unit</rate>
+      <maxUnits>Maximum Units</maxUnits>
+      <product>Product</product>
+      <unitTotal>Total Amount</unitTotal>
+      <unit>Unit</unit>
+      <feeSiteDetails>Fee Site Details</feeSiteDetails>
+      <capitalized>Capitalized?</capitalized>
+      <preventFeeSubmission>Prevent Fee Submission</preventFeeSubmission>
+      <totalRemainingAmount>Total Remaining Amount</totalRemainingAmount>
+      <unitDefinitions label="Fees">
+        <name label="Name">fee 1</name>
+        <owner label="Owner">1, Virtual Admin</owner>
+        <poNumber label="PO Number" />
+        <feeType label="Fee Rate Type">Defined on Fees</feeType>
+        <category label="Category" />
+        <product label="Product">No</product>
+        <capitalized label="Capitalized?">No</capitalized>
+        <preventFeeSubmission label="Prevent Fee Submission">No</preventFeeSubmission>
+        <maxUnits label="Maximum Units">3.00</maxUnits>
+        <rate label="Rate">EUR 12.00 / Day</rate>
+        <unitTotal>36.00</unitTotal>
+        <sowFeeWorkers label="SOW Workers with Fees" />
+        <lookupKeys />
+        <feeSiteDetails>
+          <siteCode label="Code">Site EUR</siteCode>
+          <siteName label="Name">Site EUR</siteName>
+          <address label="Address">
+            <address1 label="Address 1" />
+            <address2 label="Address 2" />
+            <city label="City">Aldersgate</city>
+            <state label="State">London, City of</state>
+            <postalCode label="Postal Code" />
+            <country label="Country">GBR</country>
+            <countryName label="Country Name">United Kingdom</countryName>
+          </address>
+        </feeSiteDetails>
+      </unitDefinitions>
+      <unitDefinitionTotalAmount label="Total Amount">36.00</unitDefinitionTotalAmount>
+    </unitDefinitionHeader>
+    <summaryHeader label="Summary">
+      <items>Items</items>
+      <finalAmount>Final Amount</finalAmount>
+      <summary label="Summary">
+        <item label="Fee">Fee</item>
+        <finalAmount label="Final Amount">0.0</finalAmount>
+      </summary>
+    </summaryHeader>
+    <managementEventHeader label="Management Events">
+      <status>Status</status>
+      <type>Type</type>
+      <name>Name</name>
+      <frequency>Frequency</frequency>
+      <dateRange>Date Range</dateRange>
+      <actor>Actor</actor>
+      <owner>Owner</owner>
+      <managementEvent label="Management Event">
+        <status label="Status">Pending</status>
+        <type>Single</type>
+        <name label="Name">ME1</name>
+        <frequency label="Frequency" />
+        <startPeriod label="Start Period">-</startPeriod>
+        <dateRange label="Date Range">09/11/2017</dateRange>
+        <actor label="Actor">Buyer</actor>
+        <owner label="Owner">1, Virtual Admin</owner>
+      </managementEvent>
+    </managementEventHeader>
+    <rateHeader label="Rates">
+      <rateCategory>Rate /UOM</rateCategory>
+      <description>Description</description>
+      <rate label="Rate">
+        <rateCategory label="Rate">Rate 1 | ST (Rate 1 | ST) /Hr</rateCategory>
+        <rateDescription label="Rate Description" />
+      </rate>
+    </rateHeader>
+    <roleHeader label="Roles">
+      <roleHeaderLabel>Role</roleHeaderLabel>
+      <siteHeaderLabel>Site</siteHeaderLabel>
+      <rateCategoryHeaderLabel>Rate Category / UOM</rateCategoryHeaderLabel>
+      <factorHeaderLabel>Factor</factorHeaderLabel>
+      <rateHeaderLabel>Rate</rateHeaderLabel>
+      <role label="Role">
+        <roleName label="Role">Engineer</roleName>
+        <roleSite label="Site">Site EUR</roleSite>
+        <rateCategory label="Rate Category / UOM">ST/Hr</rateCategory>
+        <rateFactor label="Rate Factor">0.000000</rateFactor>
+        <rate label="Rate">10.00</rate>
+      </role>
+    </roleHeader>
+    <sowWorkers label="SOW Workers">
+      <allowTeamBased label="Allow invoicing from approved Time Sheets">Yes</allowTeamBased>
+      <allowExpenseSheetInvoicing label="Allow invoicing from approved Expense Sheets">Yes</allowExpenseSheetInvoicing>
+    </sowWorkers>
+  </characteristics>
+  <signature label="IN WITNESS WHEREOF, the parties hereto have caused this Statement of Work to be executed by their duly Authorized Representatives.">
+    <signatureBuyer>
+      <buyerName label="Buyer">ANP1</buyerName>
+      <buyerSOWCFLegalEntityName label="Buyer">[]</buyerSOWCFLegalEntityName>
+      <supplierSOWCFLegalEntityName label="Supplier">[]</supplierSOWCFLegalEntityName>
+      <signatureField label="Signature" />
+      <name label="Name" />
+      <title label="Title" />
+      <address label="Address" />
+      <date label="Date" />
+    </signatureBuyer>
+    <signatureSupplier>
+      <supplierName label="Supplier">A813</supplierName>
+      <signatureField label="Signature" />
+      <name label="Name" />
+      <title label="Title" />
+      <address label="Address" />
+      <date label="Date" />
+    </signatureSupplier>
+  </signature>
+  <revisions label="SOW Revisions">
+    <revisionsHeader label="SOW Revisions">
+      <revision>Revision</revision>
+      <status>Status</status>
+      <end>End Date</end>
+      <createDate>Create Date</createDate>
+      <revisionsBuyerReference>Buyer Reference</revisionsBuyerReference>
+      <supplierReference>Supplier Reference</supplierReference>
+      <workerBudget>Worker Budget</workerBudget>
+      <totalMaximumBudget>Total Maximum Budget</totalMaximumBudget>
+      <revisionDetails label="Revisions">
+        <revision label="Revision">0</revision>
+        <status label="Status">Pending Approval</status>
+        <end label="End Date">09/11/2018</end>
+        <createDate label="Create Date">09/11/2017</createDate>
+        <revisionsBuyerReference label="label.BuyerReference" />
+        <supplierReference label="Supplier Reference" />
+        <workerBudget label="Worker Budget">12345678.00</workerBudget>
+        <totalMaximumBudget label="Total Maximum Budget">EUR 12345678.00</totalMaximumBudget>
+      </revisionDetails>
+    </revisionsHeader>
+  </revisions>
+  <requestAuditTrail label="SOW Audit Trail">
+    <requestAuditTrailHeader label="SOW Audit Trail">
+      <action>Action</action>
+      <person>Person</person>
+      <role>Role</role>
+      <companyName>Company Name</companyName>
+      <date>Date</date>
+      <requestAuditTrailDetails label="Revisions">
+        <action label="Action">Submit</action>
+        <person label="Person">Virtual Admin 1</person>
+        <role label="Role">Virtual Administrator</role>
+        <companyName label="Company Name">Anh Seconda</companyName>
+        <date label="Date">09/11/2017</date>
+      </requestAuditTrailDetails>
+    </requestAuditTrailHeader>
+  </requestAuditTrail>
+</StatementOfWork>
