@@ -5,6 +5,7 @@
  */
 package com.mycompany.fileoperations;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.*;
 import java.nio.file.FileSystems;
@@ -24,6 +25,7 @@ import java.nio.file.WatchService;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.HashMap;
 import java.util.Map;
+import org.apache.tika.exception.TikaException;
 
 /**
  *
@@ -99,7 +101,7 @@ public class WatchDir {
     /**
      * Process all events for keys queued to the watcher
      */
-    public void processEvents() {
+    public void processEvents() throws IOException, FileNotFoundException, TikaException {
         for (;;) {
 
             // wait for key to be signalled

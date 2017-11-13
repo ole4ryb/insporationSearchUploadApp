@@ -47,79 +47,11 @@ import org.xml.sax.SAXException;
  */
 public class MSExcelParse {
     
-   public static void main(final String[] args) throws IOException, TikaException, SAXException, SAXException, ParseException {
-       
-       int id = 0;
-       String messageTitle = "";
-       String messagePreacher = "";
-       String messagePlace = "";
-       LocalDate messageDate = null;
-       
-              
-       if (args.length == 0) {
-            System.out.println("no arguments were given.");
-            System.exit(0);
-        } else {
-            id = Integer.parseInt(args[0]);
-            messageTitle = args[1];
-            messagePreacher = args[2];
-            
-            String cmdDate = args[3];
-            LocalDate localDate = LocalDate.parse(cmdDate);
-            messageDate = localDate;
-        }
-      
-       int couunterMessageId = processMessageId();
-      //detecting the file type
-      BodyContentHandler handler = new BodyContentHandler();
-      Metadata metadata = new Metadata();
-     
-      InputStream fileInputStream = new FileInputStream(new File("1965-04-25_Spirit_Of_Truth.doc"));        
-      
-      //ParseContext pcontext = new ParseContext();
-      
-      Tika tika = new Tika();
-      TikaInputStream reader = TikaInputStream.get(new File("1965-04-25_Spirit_Of_Truth.doc"), metadata);
-      String contents = tika.parseToString(reader, metadata);
-      
-      String[] parts = contents.split("Ω\\d+");
-      Stream<String> quoteParts = Arrays.stream(parts);
-
-      int[] count = {0};
-      //quoteParts.forEach(x -> {System.out.println("Number: # " + count[0]++  + "\n" + x);});
-      createQuoteXmlStructure(quoteParts, couunterMessageId, messageTitle, messagePreacher, messagePlace, messageDate);
-      
+   public static void main(final String[] args) throws IOException, TikaException, SAXException, SAXException, ParseException {           
         // register directory and process its events
         String pathToDirToBeListened = System.getProperty("user.dir") + "\\messageToProcess\\";
         Path dir = Paths.get(pathToDirToBeListened);
-        new WatchDir(dir, false).processEvents();
-   
+        new WatchDir(dir, false).processEvents();   
    }
 
-    private static void createQuoteXmlStructure(Stream<String> quoteParts, int id, String messageTitle, String messagePreacher, String messagePlace, LocalDate messageDate) {
-        QuoteXmlBuilder quoteXmlBuilder = new QuoteXmlBuilder(quoteParts, id, messageTitle, messagePreacher, messagePlace, messageDate);
-        quoteXmlBuilder.buildQuoteXml();
-    }
-        
-    public static int processMessageId() throws IOException  {
-        String pathToUniqueIdCounterFile = System.getProperty("user.dir") + "\\resources\\" + "uniqueIdCounterFile.txt";
-        File f = new File(pathToUniqueIdCounterFile);
-        Integer[] couunterMessageId = new Integer[1];
-                        
-        if(f.exists() && !f.isDirectory()) { 
-            Stream<String> lines = Files.lines(Paths.get(pathToUniqueIdCounterFile));
-            lines.forEach((String line) -> {
-               couunterMessageId[0] =  Integer.parseInt(line);
-            });
-        } else {
-            int uniqueIdCounter = 1;            
-            try (Writer writer = new BufferedWriter(new OutputStreamWriter(
-              new FileOutputStream(pathToUniqueIdCounterFile), "utf-8"))) {
-                writer.write(new Integer(1).toString());
-                couunterMessageId[0] = 1;
-             }            
-        }
-        
-        return couunterMessageId[0];
-    }
 }

@@ -25,13 +25,13 @@ public class QuoteXmlBuilder {
     String messageTitle = "";
     String messagePreacher = "";
     String messagePlace = "";
-    LocalDate messageDate = null;
+    String messageDate = null;
     
     public QuoteXmlBuilder(Stream<String> quoteContent) {
            this.quoteContent = quoteContent;
     }
     
-    public QuoteXmlBuilder(Stream<String> quoteContent, int id, String messageTitle, String messagePreacher, String messagePlace, LocalDate messageDate) {
+    public QuoteXmlBuilder(Stream<String> quoteContent, int id, String messageTitle, String messagePreacher, String messagePlace, String messageDate) {
            this.quoteContent = quoteContent;
            this.idMessage = id;
            this.messageTitle = messageTitle;
@@ -82,7 +82,7 @@ public class QuoteXmlBuilder {
         doc.addContent(messagePlaceField);
         
         //SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        Element messageDateField = XmlCreator.getCreateElement("field", this.messageDate.toString() , "name", "message_date");
+        Element messageDateField = XmlCreator.getCreateElement("field", this.messageDate , "name", "message_date");
         doc.addContent(messageDateField);
         
         Element messageParagraphField = XmlCreator.getCreateElement("field", messageParagraph, "name", "message_quote");
