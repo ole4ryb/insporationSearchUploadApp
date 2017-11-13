@@ -11,17 +11,21 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.nio.file.Files;
+import static java.nio.file.Files.lines;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.apache.tika.Tika;
 import org.apache.tika.exception.TikaException;
@@ -95,7 +99,9 @@ public class FileProcessor {
                 couunterMessageId[0] = 1;
              }            
         }
-        
+        Writer wr = new FileWriter(pathToUniqueIdCounterFile);
+        wr.write(String.valueOf(++couunterMessageId[0]));
+        wr.close();
         return couunterMessageId[0];
     }
     
@@ -110,7 +116,7 @@ public class FileProcessor {
         this.messageDate = (parts[0] != null) ? parts[0] : ""; 
         this.messageTitle = parts[1]; 
         this.messagePreacher = parts[2];
-        this.messagePlace = parts[3];
+        this.messagePlace = parts[3].substring(0, parts[3].indexOf("."));
     }
     
 }
