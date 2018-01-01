@@ -77,8 +77,7 @@ public class FileProcessor {
       couunterMessageId = processMessageId();
       //int[] count = {0};
       //quoteParts.forEach(x -> {System.out.println("Number: # " + count[0]++  + "\n" + x);});
-      createQuoteXmlStructure(quoteParts, couunterMessageId, messageTitle, messagePreacher, messagePlace, messageDate);
-      
+      createQuoteXmlStructure(quoteParts, couunterMessageId, messageTitle, messagePreacher, messagePlace, messageDate);      
         
     }
     
@@ -108,7 +107,7 @@ public class FileProcessor {
     
     private void createQuoteXmlStructure(Stream<String> quoteParts, int id, String messageTitle, String messagePreacher, String messagePlace, String messageDate) {
         QuoteXmlBuilder quoteXmlBuilder = new QuoteXmlBuilder(quoteParts, id, messageTitle, messagePreacher, messagePlace, messageDate);
-        quoteXmlBuilder.buildQuoteXml();
+        quoteXmlBuilder.buildQuoteXml(messageTitle + "_" + messageDate);
     }
 
     private void parseFileName(String fileName) {

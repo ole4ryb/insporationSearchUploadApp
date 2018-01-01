@@ -5,6 +5,7 @@
  */
 package com.mycompany.wordfileparser;
 
+import com.mycompany.config.PropertyHandler;
 import org.jdom2.Element;
 import java.io.File;
 import java.util.Date;
@@ -40,7 +41,8 @@ public class QuoteXmlBuilder {
            this.messageDate = messageDate;
     }
     
-    public void buildQuoteXml() {
+    public void buildQuoteXml(String nameToProcessedMessage) {
+        String pathToProcessedMessages = System.getProperty("user.dir") + PropertyHandler.getInstance().getValue("pathToProcessedMessages");        
         Element root = getRootElement("add");        
          
         int[] counter = {0};
@@ -53,7 +55,7 @@ public class QuoteXmlBuilder {
         try{ 
             XMLOutputter outter = new XMLOutputter();
             outter.setFormat(Format.getPrettyFormat());
-            outter.output(root, new FileWriter(new File("structureXml.xml")));
+            outter.output(root, new FileWriter(new File(pathToProcessedMessages + nameToProcessedMessage + ".xml")));
 //            PrintWriter writer = new PrintWriter("structureXml.txt", "UTF-8");
 //            writer.println(root.toString());            
 //            writer.close();
