@@ -5,6 +5,7 @@
  */
 package com.mycompany.fileoperations;
 
+import com.mycompany.config.PropertyHandler;
 import com.mycompany.wordfileparser.QuoteXmlBuilder;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -61,7 +62,7 @@ public class FileProcessor {
       Metadata metadata = new Metadata();
      
       //ParseContext pcontext = new ParseContext();
-      String pathToDirToBeListened = System.getProperty("user.dir") + "\\messageToProcess\\";
+      String pathToDirToBeListened = System.getProperty("user.dir") + PropertyHandler.getInstance().getValue("messageToProcess"); //"\\messageToProcess\\";
       Path dir = Paths.get(pathToDirToBeListened);
       
       InputStream fileInputStream = new FileInputStream(new File(pathToDirToBeListened + this.fileName));        
