@@ -24,6 +24,7 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -55,13 +56,11 @@ public class FileProcessor {
         parseFileName(this.fileName);
     }
     
-    protected void extractMessageDataFromFileName() throws FileNotFoundException, IOException, TikaException {
-        
+    protected void extractMessageDataFromFileName() throws FileNotFoundException, IOException, TikaException {        
          //detecting the file type
       BodyContentHandler handler = new BodyContentHandler();
       Metadata metadata = new Metadata();
      
-      //ParseContext pcontext = new ParseContext();
       String pathToDirToBeListened = System.getProperty("user.dir") + PropertyHandler.getInstance().getValue("messageToProcess"); //"\\messageToProcess\\";
       Path dir = Paths.get(pathToDirToBeListened);
       
@@ -71,14 +70,17 @@ public class FileProcessor {
       TikaInputStream reader = TikaInputStream.get(fileInputStream); //TikaInputStream.get(new File(this.fileName), metadata);
       String contents = tika.parseToString(reader, metadata);
       
-      String[] parts = contents.split("Ω\\d+");
-      Stream<String> quoteParts = Arrays.stream(parts);
-
-      couunterMessageId = processMessageId();
-      //int[] count = {0};
-      //quoteParts.forEach(x -> {System.out.println("Number: # " + count[0]++  + "\n" + x);});
-      createQuoteXmlStructure(quoteParts, couunterMessageId, messageTitle, messagePreacher, messagePlace, messageDate);      
+      passQuotesToCreateXmlStructure(contents);
         
+    }
+
+    private void passQuotesToCreateXmlStructure(String contents) throws IOException {
+        String[] parts = contents.split("Ω\\d+");
+        if(parts != null && parts.length > 0) {
+            Stream<String> quoteParts = Arrays.stream(parts);
+            couunterMessageId = processMessageId();
+            createQuoteXmlStructure(quoteParts, couunterMessageId, messageTitle, messagePreacher, messagePlace, messageDate);
+        }
     }
     
     public int processMessageId() throws IOException  {
@@ -116,7 +118,15 @@ public class FileProcessor {
         this.messageDate = (parts[0] != null) ? parts[0] : ""; 
         this.messageTitle = parts[1]; 
         this.messagePreacher = parts[2];
-        this.messagePlace = parts[3].substring(0, parts[3].indexOf("."));
+        if(parts[3] != null) {
+            if(parts[3].contains(".") && parts[3].substring(0, parts[3].indexOf(".")).length() > 0) {
+                this.messagePlace = parts[3].substring(0, parts[3].indexOf("."));
+            } else if(parts[3].length() > 0) {
+                this.messagePlace = parts[3];
+            } else {
+                this.messagePlace = " ";
+            }
+        }
     }
     
 }
