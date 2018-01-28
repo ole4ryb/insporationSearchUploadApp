@@ -94,8 +94,7 @@ public class XmlCreator {
         return null;
     }
 
-    public static org.w3c.dom.Document loadXMLFrom(String xml)
-            throws SAXException, IOException {
+    public static org.w3c.dom.Document loadXMLFrom(String xml) throws SAXException, IOException {
         return loadXMLFrom(new ByteArrayInputStream(xml.getBytes()));
     }
 
@@ -123,7 +122,7 @@ public class XmlCreator {
         return elem;
     }
     
-    public static Element createElement(String elementName, String elementValue, Map<String, String> attributeMap){
+    public static Element createElement(String elementName, String elementValue, Map<String, String> attributeMap) {
         Element elem = new Element(elementName);
         elem.setText(elementValue);
         for(String attributeName: attributeMap.keySet()){

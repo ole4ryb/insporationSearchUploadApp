@@ -8,11 +8,16 @@ package com.mycompany.wordfileparser;
 import com.mycompany.config.PropertyHandler;
 import org.jdom2.Element;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.util.Date;
 import java.util.stream.Stream;
 import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 /**
@@ -45,7 +50,7 @@ public class QuoteXmlBuilder {
         String pathToProcessedMessages = System.getProperty("user.dir") + PropertyHandler.getInstance().getValue("pathToProcessedMessages");        
         Element root = getRootElement("add");        
          
-        int[] counter = {0};
+        int[] counter = {1};
         this.quoteContent.forEach(cont -> {            
             Element docParagraph = buildDocElement(cont, counter[0]++);
             root.addContent(docParagraph);        
@@ -55,7 +60,15 @@ public class QuoteXmlBuilder {
         try{ 
             XMLOutputter outter = new XMLOutputter();
             outter.setFormat(Format.getPrettyFormat());
-            outter.output(root, new FileWriter(new File(pathToProcessedMessages + nameToProcessedMessage + ".xml")));
+            Writer processedXmlFile = null;
+            try {
+                    processedXmlFile = new OutputStreamWriter(new FileOutputStream(new File(pathToProcessedMessages + nameToProcessedMessage + ".xml")), StandardCharsets.UTF_8);
+                    outter.output(root, processedXmlFile);
+                  } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+    
+            //outter.output(root, new FileWriter(new File(pathToProcessedMessages + nameToProcessedMessage + ".xml")));
 //            PrintWriter writer = new PrintWriter("structureXml.txt", "UTF-8");
 //            writer.println(root.toString());            
 //            writer.close();
@@ -67,9 +80,9 @@ public class QuoteXmlBuilder {
         
     public Element buildDocElement(String messageParagraph, int counter) {
         Element doc = XmlCreator.getCreateElement("doc", "", "", "");
-        
-        Element idField = XmlCreator.getCreateElement("field", Integer.toString(idMessage), "name", "id");
-        doc.addContent(idField);
+                        
+        Element idMessageField = XmlCreator.getCreateElement("field", Integer.toString(idMessage), "name", "message_id");
+        doc.addContent(idMessageField);
                 
         Element quoteIdField = XmlCreator.getCreateElement("field", Integer.toString(counter), "name", "quote_id");
         doc.addContent(quoteIdField);
